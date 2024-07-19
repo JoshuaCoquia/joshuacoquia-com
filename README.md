@@ -1,4 +1,4 @@
-# JoshuaCoquia.com
+# joshuacoquia.com
 
 Recording the journey.
 
