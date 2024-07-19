@@ -1,32 +1,20 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Joshua Coquia";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Joshua Coquia's Website</title>
-	</head>
-	<body>
-		<Header />
-		<section id="hero">
-			<h2>Joshua Coquia</h2>
-			<p>Lifelong Learner - Recording the journey.</p>
-			<a href="/about">Learn More</a>
-			<a href="/contact">Contact Me</a>
-		</section>
-		<section>
-			<h3>Hi, I'm Joshua Coquia.</h3>
-			<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <a href="/about">my journey</a> inspires you to improve your own life.</a></p>
-		</section>
-		<section>
-			<h3>Featured Articles</h3>
-			<!--TODO:Create Articles List + Article Preview Components-->
-		</section>
-		<Footer />
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<section id="hero">
+		<h2>Joshua Coquia</h2>
+		<p>Lifelong Learner - Recording the journey.</p>
+		<a href="/about">Learn More</a>
+		<a href="/contact">Contact Me</a>
+	</section>
+	<section>
+		<h3>Hi, I'm Joshua Coquia.</h3>
+		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <a href="/about">my journey</a> inspires you to improve your own life.</a></p>
+	</section>
+	<section>
+		<h3>Featured Articles</h3>
+		<!--TODO:Create Articles List + Article Preview Components-->
+	</section>
+</BaseLayout>
