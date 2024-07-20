@@ -1,0 +1,8 @@
+---
+const { href, bgcolor, textcolor } = Astro.props;
+---
+<a href={href} class:list={[
+    "border-x-8 border-y-4 px-4 py-2 text-3xl rounded-2xl",
+    bgcolor ? `bg-${bgcolor} border-${bgcolor}` : "bg-background border-background",
+    textcolor ? `text-${textcolor}` : "text-text"
+    ]}><slot /></a>

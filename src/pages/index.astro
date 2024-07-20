@@ -1,14 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CTABtn from "../components/CTABtn.astro";
 import Section from "../components/Section.astro";
 const pageTitle = "Joshua Coquia";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<section class="bg-primary px-20 py-10" id="hero">
 		<h2 class="text-4xl font-bold">Joshua Coquia</h2>
-		<p class="text-2xl">Lifelong Learner - Recording the journey.</p>
-		<a href="/about">Learn More</a>
-		<a href="/contact">Contact Me</a>
+		<p class="text-2xl mb-8">Lifelong Learner—Recording the journey.</p>
+		<CTABtn bgcolor="accent" textcolor="background" href="/about">Learn More</CTABtn>
+		<CTABtn bgcolor="secondary" textcolor="background" href="/contact">Contact Me</CTABtn>
 	</section>
 	<Section title="Hi, I'm Joshua Coquia.">
 		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <a href="/about">my journey</a> inspires you to improve your own life.</a></p>
