@@ -1,16 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
 import Title from "../components/Title.astro";
 const pageTitle = "Articles";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<Title pageTitle={pageTitle} />
-	<section>
+	<Section>
 		<h3>Featured Articles</h3>
 		<!--TODO:Create Articles List + Article Preview Components-->
-	</section>
-	<section>
+	</Section>
+	<Section>
 		<h3>Recent Articles</h3>
 		<!--TODO:Create Articles List + Article Preview Components-->
-	</section>
+	</Section>
 </BaseLayout>

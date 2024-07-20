@@ -1,6 +1,6 @@
 ---
-const { additionalClasses, id } = Astro.props;
+const { bg, id } = Astro.props;
 ---
-<section class:list={["bg-background", additionalClasses]} id={id}>
+<section class:list={bg || 'bg-background'}} id={id}>
     <slot />
 </section>
