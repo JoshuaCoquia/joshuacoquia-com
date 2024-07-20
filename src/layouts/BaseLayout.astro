@@ -13,9 +13,10 @@ const { pageTitle } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle ? pageTitle : "Joshua Coquia"}</title>
 	</head>
-	<body class="bg-background text-text">
+	<body class="bg-background text-text min-h-screen flex flex-col justify-between">
 		<Header />
 		<slot />
+		<div class="flex-grow"></div>
 		<Footer />
 	</body>
 </html>

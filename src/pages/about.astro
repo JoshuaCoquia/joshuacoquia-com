@@ -1,17 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Title from "../components/Title.astro";
 import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
 const pageTitle = "About";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<Title pageTitle={pageTitle} />
-	<Section>
-		<h3>Hi, I'm Joshua Coquia.</h3>
+	<Section title="Hi, I'm Joshua Coquia.">
 		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <a href="/about">my journey</a> inspires you to improve your own life.</a></p>
 	</Section>
-	<Section>
-		<h3>Skills I'm Developing</h3>
+	<Section title="Skills I'm Developing">
 		<div class="two-col">
 			<img>
 			<p><strong>Speedcubing</strong> - I can consistently solve my Rubik's Cube in under 20 seconds. I use the CFOP method. <a href="https://worldcubeassociation.org/persons/2023COQU02">Check out my results on the World Cube Association website.</a></p>
@@ -25,8 +23,7 @@ const pageTitle = "About";
 			<p><strong>Web Design</strong> - I focus on creating professional websites. I create responsive web designs in Figma using design skills like color theory, typography, and composition.</p>
 		</div>
 	</Section>
-	<Section>
-		<h3>Why Skills?</h3>
+	<Section title="Why Skills?">
 		<p>Skills enable me to change the outcomes of my life by clearly defining the inputs I need to change to get different results. By framing everything as a skill, I enable myself to grow in every part of my life. I put a huge emphasis on lifelong learning because I know I have potential to grow throughout my entire life.</p>
 	</Section>
 </BaseLayout>
