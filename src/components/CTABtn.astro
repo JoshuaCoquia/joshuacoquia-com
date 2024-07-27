@@ -1,8 +1,24 @@
 ---
 const { href, bgcolor, textcolor } = Astro.props;
+
+const bgColors = {
+    text: "bg-text border-text",
+    background: "bg-background border-background",
+    primary: "bg-primary border-primary",
+    secondary: "bg-secondary border-secondary",
+    accent: "bg-accent border-accent",
+}
+
+const textColors = {
+    text: "text-text",
+    background: "text-background",
+    primary: "text-primary",
+    secondary: "text-secondary",
+    accent: "text-accent",
+}
 ---
 <a href={href} class:list={[
-    "border-x-8 border-y-4 px-4 py-2 text-3xl rounded-2xl",
-    bgcolor ? `bg-${bgcolor} border-${bgcolor}` : "bg-background border-background",
-    textcolor ? `text-${textcolor}` : "text-text"
+    "w-fit inline-block px-4 py-2 text-3xl rounded-2xl",
+    bgColors[bgcolor],
+    textColors[textcolor],
     ]}><slot /></a>
