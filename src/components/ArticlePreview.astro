@@ -1,0 +1,9 @@
+---
+const { title, publishedAt, href } = Astro.props;
+---
+<article>
+    <a href={href}>
+        <p>{publishedAt}</p>
+        <h3>{title}</h3>
+    </a>
+</article>
