@@ -1,19 +1,20 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Link from "../components/link.astro";
-import Section from "../components/Section.astro";
-import Title from "../components/Title.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Link from "../../components/link.astro";
+import Section from "../../components/Section.astro";
+import Title from "../../components/Title.astro";
 const pageTitle = "School Calendar";
 ---
 <BaseLayout pageTitle={pageTitle} hidden>
 	<Title pageTitle={pageTitle} />
 	<Section title="Quick Add to Google Calendar">
 		<p><strong>NOTE:</strong> You can only view this on your rafos account.</p>
+		<p>Don't get any calendars you don't need. For example, if you use EOP often, don't download the Odd Day ELTs/Even Day ELTs calendars.</p>
 		<ul>
 			<li>
 				<Link href=
 			"https://calendar.google.com/calendar/u/0?cid=Y184ZjExZWM4ZDliYTM4N2ZiYWU3NmFhYWZlMjc2ODFjZTg5MDVkMDg2ZTcyYjYxODVkZTAwNTA3MjEwYTA5ODkzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
-			>Core Calendar</Link>
+			>Core Calendar (Get this one first!)</Link>
 			</li>
 		<li>
 			<Link href=

@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
+import Link from "../components/link.astro";
+const pageTitle = "Links";
+---
+<BaseLayout pageTitle={pageTitle} hidden>
+	<Title pageTitle={pageTitle} />
+    <Section>
+        <nav>
+            <ul>
+                <li>
+                    <Link href="https://www.worldcubeassociation.org/persons/2023COQU02">WCA Profile</Link>
+                </li>
+                <li>
+                    <Link href="https://github.com/JoshuaCoquia">GitHub</Link>
+                </li>
+                <li>
+                    <Link href="mailto:joshuacoquia@hotmail.com">Email</Link>
+                </li>
+            </ul>
+        </nav>
+    </Section>
+</BaseLayout>

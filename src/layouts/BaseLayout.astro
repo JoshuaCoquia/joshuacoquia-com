@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
 interface Props {
 	pageTitle: string;
 	hidden?: Boolean;
@@ -15,8 +14,9 @@ const { pageTitle, hidden } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle ? pageTitle : "Joshua Coquia"}</title>
 		{hidden && <meta name="robots" content="noindex">}
+		<script src="../components/firebase"></script>
+		<title>{pageTitle ? pageTitle : "Joshua Coquia"}</title>
 	</head>
 	<body class="bg-background text-text min-h-screen flex flex-col justify-between">
 		<Header />
