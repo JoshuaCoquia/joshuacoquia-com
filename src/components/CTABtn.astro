@@ -16,9 +16,11 @@ const textColors = {
     secondary: "text-secondary",
     accent: "text-accent",
 }
+
+type colorOptions = "text" | "background" | "primary" | "secondary" | "accent";
 ---
 <a href={href} class:list={[
     "w-fit inline-block px-4 py-2 text-3xl rounded-2xl",
-    bgColors[bgcolor],
-    textColors[textcolor],
+    bgColors[bgcolor as colorOptions],
+    textColors[textcolor as colorOptions],
     ]}><slot /></a>

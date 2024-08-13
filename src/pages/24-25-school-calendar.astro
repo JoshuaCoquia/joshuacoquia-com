@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Link from "../components/link.astro";
+import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
+const pageTitle = "School Calendar";
+---
+<BaseLayout pageTitle={pageTitle}>
+	<Title pageTitle={pageTitle} />
+	<Section title="Quick Add to Google Calendar">
+		<p><strong>NOTE:</strong> You can only view this on your rafos account.</p>
+		<ul>
+			<li>
+				<Link href=
+			"https://calendar.google.com/calendar/u/0?cid=Y184ZjExZWM4ZDliYTM4N2ZiYWU3NmFhYWZlMjc2ODFjZTg5MDVkMDg2ZTcyYjYxODVkZTAwNTA3MjEwYTA5ODkzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+			>Core Calendar</Link>
+			</li>
+		<li>
+			<Link href=
+			"https://calendar.google.com/calendar/u/0?cid=Y19hM2U2YjZkYmI2ZTI5ODM2ZjhkODBiOTY4ZDgwNDM5ZDlkZjdmNGU1NDc3Y2ExYmY3MzY2NmE3MWNhYjNkYWI1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+			>1st Period</Link>
+			</li>
+		<li>
+			<Link href=
+			"https://calendar.google.com/calendar/u/0?cid=Y182ZGI5OWE1MDliMzU1ZGNmYzg2NjE1YWUzZTJiNTZlNGQ1NmY5NmU1NzEyZWE5ODZlNzdlMDZjNmI1NThmYWRlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+			>2nd Period</Link>
+			</li>
+		<li>
+			<Link href=
+			"https://calendar.google.com/calendar/u/0?cid=Y183YTA4NmNlYWM4NTNlZTI1MjE0ZjIzOWY2ODgyOGJlNjA0NTgxZGM2NDc1MmJjZGJhNTUwMTlmYWE0MGIxZGQzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+			>5th Period</Link>
+			</li>
+		<li>
+			<Link href=
+			"https://calendar.google.com/calendar/u/0?cid=Y19lY2VmZjk2YTA0M2Y0NmRhZDdkYTdkMjY0ZjQ2NDc4NTA2NGY2MjQ4MWJkOWEzMTFjZjMyNWM3MzBlYTQwNGQ0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+			>6th Period</Link>
+			</li>
+		<li>
+			<Link href=
+			"https://calendar.google.com/calendar/u/0?cid=Y19iZDQ5OTliNGNkNDQ5OTM4ZDk3Mjk4ZDk2MTIwMTUwNjRmZTcwMjBiYTg5MDVjZWM5YmJhMWI2NWExNDc2NTUwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+			>Odd Day ELTs</Link>
+			</li>
+		<li>
+			<Link href=
+			"https://calendar.google.com/calendar/u/0?cid=Y19kNzllN2M1MWFkMjMyNzQ5NWNkZjgyYzZlMzk0NGY1OWM2NDY1NTNiOGVkODA5ZmQ5MDNlNGJlNzg1MDgxNmJhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+			>Even Day ELTs</Link>
+			</li>
+		</ul>
+	</Section>
+	<Section title="Self Install">
+		<p>Install the .ics files here:</p>
+		<Link href="/24-25-school-calendar/full-calendar.zip">Full Calendar</Link>
+		<p>This will remove the colors from the events, but every event will still be in the calendar.</p>
+	</Section>
+</BaseLayout>
