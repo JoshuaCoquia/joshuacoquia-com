@@ -11,7 +11,18 @@ export default {
 			secondary: '#193b4d',
 			accent: '#702424',
 		},
-		extend: {},
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						h1: {
+							fontWeight: '700',
+							fontSize: '2.5rem',
+						}
+					}
+				}
+			}
+		},
 		fontSize: {
 			base: '1rem',
 			xl: '1.5rem',
@@ -20,5 +31,7 @@ export default {
 			'4xl': '4.5rem',
 		}
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 }

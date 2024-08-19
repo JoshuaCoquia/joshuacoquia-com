@@ -7,21 +7,21 @@ interface Props {
 }
 const { title, featuredOnly } = Astro.props;
 const articleCollection = await getCollection('article', (article => {
-    return featuredOnly ? article.data.featured : true; // If (featuredOnly = true) only include featured articles.
+    return (featuredOnly ? article.data.featured : true) &&
+    article.data.draft != true; // If (featuredOnly = true) only include featured articles.
 }));
 ---
 
 <Section title={title}>
-    <ul>
+    <ul class="lg:ps-0">
         {articleCollection.map(article => (
-            <br />
-            <li>
+            <li class="my-8 lg:my-8 lg:ps-0">
                 <time datetime={article.data.publishDate.toISOString()}>{article.data.publishDate.toLocaleDateString('en-us', {
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric',
                 })}</time>
-                <h4 class="text-2xl"><a href={'articles/' + article.slug}>{article.data.title}</a></h4>
+                <h3 class="text-2xl lg:my-0 leading-10"><a href={'articles/' + article.slug}>{article.data.title}</a></h2>
             </li>
     ))}
     </ul>

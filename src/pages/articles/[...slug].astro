@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import Title from "../../components/Title.astro";
+
+export async function getStaticPaths() {
+  const articleCollection = await getCollection("article");
+  return articleCollection.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+---
+
+<BaseLayout pageTitle={article.data.title}>
+  <Title pageTitle="Articles" />
+  <Section>
+    <article class="prose mx-auto">
+      <time datetime={article.data.publishDate.toISOString()}
+        >{
+          article.data.publishDate.toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })
+        }</time>
+      <Content />
+    </article>
+  </Section>
+</BaseLayout>
