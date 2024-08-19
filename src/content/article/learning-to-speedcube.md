@@ -5,8 +5,7 @@ draft: false
 tags:
   - speedcubing
   - about-me
-author: Joshua Coquia
-pubDatetime: 2023-05-22T02:27:56.490Z
+publishDate: 2023-05-22T02:27:56.490Z
 featured: false
 ---
 

@@ -6,7 +6,7 @@ tags:
   - self-improvement
   - about-me
 author: Joshua Coquia
-pubDatetime: 2023-06-19T02:32:49.685Z
+publishDate: 2023-06-19T02:32:49.685Z
 featured: false
 ---
 

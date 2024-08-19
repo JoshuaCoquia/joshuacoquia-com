@@ -1,4 +1,5 @@
 ---
+import ArticleList from "../components/ArticleList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTABtn from "../components/CTABtn.astro";
 import Section from "../components/Section.astro";
@@ -15,4 +16,5 @@ const pageTitle = "Joshua Coquia";
 	<Section title="Hi, I'm Joshua Coquia.">
 		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <a href="/about">my journey</a> inspires you to improve your own life.</p>
 	</Section>
+	<ArticleList title="Featured Articles" featuredOnly />
 </BaseLayout>

@@ -1,13 +1,11 @@
 ---
+import ArticleList from "../../components/ArticleList.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Section from "../../components/Section.astro";
 import Title from "../../components/Title.astro";
 const pageTitle = "Articles";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<Title pageTitle={pageTitle} />
-	<Section title="Under construction. Check back later!">
-	</Section>
-	<script>console.log("You can view the articles as .md files in the github repo!")</script>
-	<script>console.log("https://github.com/JoshuaCoquia/joshuacoquia-com")</script>
+	<ArticleList title="Featured Articles" featuredOnly />
+	<ArticleList title="All Articles" />
 </BaseLayout>

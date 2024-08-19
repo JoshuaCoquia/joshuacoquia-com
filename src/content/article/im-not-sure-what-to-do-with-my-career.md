@@ -5,7 +5,7 @@ draft: false
 tags:
   - about-me
 author: Joshua Coquia
-pubDatetime: 2023-08-07T02:30:31.805Z
+publishDate: 2023-08-07T02:30:31.805Z
 postSlug: ""
 featured: false
 ---

@@ -6,7 +6,7 @@ tags:
   - academics
   - self-improvement
 author: Joshua Coquia
-pubDatetime: 2023-05-29T02:30:36.313Z
+publishDate: 2023-05-29T02:30:36.313Z
 featured: true
 ---
 

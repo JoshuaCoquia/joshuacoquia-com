@@ -5,7 +5,7 @@ draft: false
 tags:
   - speedcubing
 author: Joshua Coquia
-pubDatetime: 2023-07-02T02:30:08.359Z
+publishDate: 2023-07-02T02:30:08.359Z
 featured: false
 ---
 

@@ -1,3 +1,28 @@
 ---
-
+import { getCollection } from "astro:content";
+import Section from "./Section.astro";
+interface Props {
+    featuredOnly?: boolean;
+    title?: string;
+}
+const { title, featuredOnly } = Astro.props;
+const articleCollection = await getCollection('article', (article => {
+    return featuredOnly ? article.data.featured : true; // If (featuredOnly = true) only include featured articles.
+}));
 ---
+
+<Section title={title}>
+    <ul>
+        {articleCollection.map(article => (
+            <br />
+            <li>
+                <time datetime={article.data.publishDate.toISOString()}>{article.data.publishDate.toLocaleDateString('en-us', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                })}</time>
+                <h4 class="text-2xl"><a href={'articles/' + article.slug}>{article.data.title}</a></h4>
+            </li>
+    ))}
+    </ul>
+</Section>

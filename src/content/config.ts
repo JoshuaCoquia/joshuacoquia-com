@@ -7,7 +7,8 @@ const articleCollection = defineCollection({
         description: z.string(),
         publishDate: z.date(),
         tags: z.array(z.string()),
-        featured: z.boolean(),
+        featured: z.boolean().optional().or(z.literal('')),
+        draft: z.boolean().optional().or(z.literal('')),
     }),
 });
 

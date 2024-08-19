@@ -5,7 +5,7 @@ draft: false
 tags:
   - self-improvement
 author: Joshua Coquia
-pubDatetime: 2023-06-05T02:30:00.000Z
+publishDate: 2023-06-05T02:30:00.000Z
 featured: true
 ---
 
