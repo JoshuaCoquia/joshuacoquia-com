@@ -2,17 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import Title from "../components/Title.astro";
+import Link from "../components/link.astro";
 const pageTitle = "About";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<Title pageTitle={pageTitle} />
 	<Section title="Hi, I'm Joshua Coquia.">
-		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <a href="/about">my journey</a> inspires you to improve your own life.</a></p>
+		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope my journey you to improve your own life.</p>
 	</Section>
 	<Section title="Skills I'm Developing">
 		<div class="two-col">
 			<img>
-			<p><strong>Speedcubing</strong> - I can consistently solve my Rubik's Cube in under 20 seconds. I use the CFOP method. <a href="https://worldcubeassociation.org/persons/2023COQU02">Check out my results on the World Cube Association website.</a></p>
+			<p><strong>Speedcubing</strong> - I can consistently solve my Rubik's Cube in under 20 seconds. I use the CFOP method. <Link href="https://worldcubeassociation.org/persons/2023COQU02">Check out my results on the World Cube Association website.</Link></p>
 		</div>
 		<div class="two-col">
 			<img>
