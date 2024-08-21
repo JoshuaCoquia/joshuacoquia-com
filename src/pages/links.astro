@@ -2,23 +2,22 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import Title from "../components/Title.astro";
-import Link from "../components/link.astro";
 const pageTitle = "Links";
+import { getCollection } from "astro:content";
+import CTABtn from "../components/CTABtn.astro";
+const links = await getCollection('link', (link => {
+    return link.data.hidden != true;
+}));
 ---
 <BaseLayout pageTitle={pageTitle} hidden>
 	<Title pageTitle={pageTitle} />
     <Section>
         <nav>
             <ul class="lg:ps-0 text-center">
-                <li class="lg:ps-0">
-                    <Link href="https://www.worldcubeassociation.org/persons/2023COQU02">WCA Profile</Link>
-                </li>
-                <li class="lg:ps-0">
-                    <Link href="https://github.com/JoshuaCoquia">GitHub</Link>
-                </li>
-                <li class="lg:ps-0">
-                    <Link href="mailto:joshuacoquia@hotmail.com">Email</Link>
-                </li>
+                {
+                    links.map(link => (
+                        <li><CTABtn bgcolor="secondary" textcolor="background" href={link.data.url}>{link.data.title}</CTABtn></li>
+                    ))}
             </ul>
         </nav>
     </Section>

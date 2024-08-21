@@ -12,6 +12,16 @@ const articleCollection = defineCollection({
     }),
 });
 
+const linkCollection = defineCollection({
+    type: 'data',
+    schema: z.object({
+        hidden: z.boolean().optional().or(z.literal('')),
+        title: z.string(),
+        url: z.string(),
+    }),
+});
+
 export const collections = {
     'article': articleCollection,
+    'link': linkCollection,
 }
