@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Content & Unlisted Pages
+
+src/content/article/
+src/content/link/
+src/pages/unlisted/
