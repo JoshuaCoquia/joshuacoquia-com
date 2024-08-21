@@ -16,7 +16,7 @@ const { article } = Astro.props;
 const { Content } = await article.render();
 ---
 
-<BaseLayout pageTitle={article.data.title}>
+<BaseLayout pageTitle={article.data.title} hidden={article.data.draft ||= article.data.hidden ||= false}>
   <Title pageTitle="Articles" />
   <Section>
     <article class="prose mx-auto">

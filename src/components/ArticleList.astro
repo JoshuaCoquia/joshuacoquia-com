@@ -7,8 +7,9 @@ interface Props {
 }
 const { title, featuredOnly } = Astro.props;
 const articleCollection = await getCollection('article', (article => {
-    return (featuredOnly ? article.data.featured : true) &&
-    article.data.draft != true; // If (featuredOnly = true) only include featured articles.
+    return (featuredOnly ? article.data.featured : true) && // If (featuredOnly = true) only include featured articles.
+    article.data.hidden != true && 
+    article.data.draft != true; 
 }));
 ---
 
