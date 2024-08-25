@@ -4,21 +4,31 @@ import Section from "./Section.astro";
 import ArticlePreview from "./ArticlePreview.astro";
 interface Props {
     featuredOnly?: boolean;
+    prose?: boolean;
     title?: string;
+    columns?: 1 | 2 | 3 | 4 | 5;
 }
-const { title, featuredOnly } = Astro.props;
+const { title, featuredOnly, columns, prose } = Astro.props;
 const articleData = await getCollection('article', (article => {
     return (featuredOnly ? article.data.featured : true) && // If (featuredOnly = true) only include featured articles.
     article.data.hidden != true && 
     article.data.draft != true; 
 }));
-const articleCollection = articleData.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+let articleCollection = articleData.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+const gridCols = [
+    "",
+    "lg:grid-cols-1",
+    "lg:grid-cols-2",
+    "lg:grid-cols-3",
+    "lg:grid-cols-4",
+    "lg:grid-cols-5",
+]
 ---
 
-<Section title={title}>
-    <ul class="lg:ps-0">
+<Section title={title} notprose={!prose}>
+    <ul class:list={["lg:ps-0 grid auto-rows-min gap-8 mt-3", gridCols[columns!]]}>
         {articleCollection.map(article => (
-            <li class="my-8 lg:my-8 lg:ps-0">
+            <li class="lg:ps-0 h-fit">
                 <ArticlePreview title={article.data.title} publishDate={article.data.publishDate} slug={article.slug} description={article.data.description}/>
             </li>
     ))}

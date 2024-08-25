@@ -20,14 +20,15 @@ const { Content } = await article.render();
   <Title pageTitle="Articles" />
   <Section>
     <article class="prose mx-auto">
+      <p class="italic">Posted
       <time datetime={article.data.publishDate.toISOString()}
         >{
           article.data.publishDate.toLocaleDateString("en-us", {
             year: "numeric",
-            month: "short",
+            month: "long",
             day: "numeric",
           })
-        }</time>
+        }</time>.</p>
       <Content />
     </article>
   </Section>
