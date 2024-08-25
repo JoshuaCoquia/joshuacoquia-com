@@ -31,7 +31,19 @@ export default {
 						h1: {
 							fontWeight: '700',
 							fontSize: '2.5rem',
-						}
+							lineHeight: '1.5',
+						},
+						h2: { lineHeight: '1.5 '},
+					}
+				},
+				lg: {
+					css: {
+						h1: {
+							fontWeight: '700',
+							fontSize: '2.5rem',
+							lineHeight: '1.5',
+						},
+						h2: { lineHeight: '1.5' },
 					}
 				}
 			}
