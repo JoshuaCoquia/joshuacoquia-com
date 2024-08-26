@@ -8,7 +8,7 @@ interface Props {
 }
 ---
 <article>
-    <a href={'articles/' + slug}>
+    <a href={'/articles/' + slug}>
         <div class="border-2 p-4 rounded-2xl border-black-100 bg-black-100">
             <time class="text-xs lg:text-sm" datetime={publishDate.toISOString()}>{publishDate.toLocaleDateString('en-us', {
                 year: 'numeric',

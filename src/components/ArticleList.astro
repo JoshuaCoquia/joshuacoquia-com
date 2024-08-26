@@ -27,7 +27,7 @@ const gridCols = [
 
 <Section title={title} notprose={!prose}>
     <ul class:list={["lg:ps-0 grid auto-rows-min gap-8 mt-3", gridCols[columns!]]}>
-        {articleCollection.map(article => (
+        {articleCollection.filter(article => article.data.publishDate.getTime() < Date.now()).map(article => (
             <li class="lg:ps-0 h-fit">
                 <ArticlePreview title={article.data.title} publishDate={article.data.publishDate} slug={article.slug} description={article.data.description}/>
             </li>
