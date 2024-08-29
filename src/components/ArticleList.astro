@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Section from "./Section.astro";
-import ArticlePreview from "./ArticlePreview.astro";
 interface Props {
     featuredOnly?: boolean;
     prose?: boolean;
@@ -23,14 +22,11 @@ const gridCols = [
     "lg:grid-cols-4",
     "lg:grid-cols-5",
 ]
+import Articles from "./Articles.tsx";
 ---
 
 <Section title={title} notprose={!prose}>
     <ul class:list={["lg:ps-0 grid auto-rows-min gap-8 mt-3", gridCols[columns!]]}>
-        {articleCollection.filter(article => article.data.publishDate.getTime() < Date.now()).map(article => (
-            <li class="lg:ps-0 h-fit">
-                <ArticlePreview title={article.data.title} publishDate={article.data.publishDate} slug={article.slug} description={article.data.description}/>
-            </li>
-    ))}
+        <Articles client:load articles={articleCollection}></Articles>
     </ul>
 </Section>
