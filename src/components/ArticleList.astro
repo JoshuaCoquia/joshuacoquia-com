@@ -14,19 +14,11 @@ const articleData = await getCollection('article', (article => {
     article.data.draft != true; 
 }));
 let articleCollection = articleData.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
-const gridCols = [
-    "",
-    "lg:grid-cols-1",
-    "lg:grid-cols-2",
-    "lg:grid-cols-3",
-    "lg:grid-cols-4",
-    "lg:grid-cols-5",
-]
 import Articles from "./Articles.tsx";
 ---
 
 <Section title={title} notprose={!prose}>
-    <ul class:list={["lg:ps-0 grid auto-rows-min gap-8 mt-3", gridCols[columns!]]}>
-        <Articles client:load articles={articleCollection}></Articles>
+    <!--TODO: Fix Layout Shift -->
+        <Articles client:only="react" articles={articleCollection} columns={columns} />
     </ul>
 </Section>

@@ -1,16 +1,39 @@
-import ArticlePreview from "./ArticlePreview.astro";
+import ArticlePreview from "./ArticlePreview";
 
 interface Props {
-    articles: any[];
+  articles: any[];
+  columns?: 1 | 2 | 3 | 4 | 5 | undefined;
 }
 
+const gridCols = [
+  "",
+  "lg:grid-cols-1",
+  "lg:grid-cols-2",
+  "lg:grid-cols-3",
+  "lg:grid-cols-4",
+  "lg:grid-cols-5",
+];
+
 export default function Articles(props: Props) {
-    console.log('h')
-    return (
-        props.articles.filter(article => article.data.publishDate.getTime() < Date.now()).map(article => {
-            return <li className="lg:ps-0 h-fit">
-                <ArticlePreview title={article.data.title} publishDate={article.data.publishDate} slug={article.slug} description={article.data.description}/>
-            </li>;
-        })
-    );
+  const { columns } = props;
+  return (
+    <ul
+      className={`lg:ps-0 grid auto-rows-min gap-8 mt-3 ${gridCols[columns!]}`}
+    >
+      {props.articles
+        .filter((article) => article.data.publishDate.getTime() < Date.now())
+        .map((article) => {
+          return (
+            <li key={article.slug} className="lg:ps-0 h-fit">
+              <ArticlePreview
+                title={article.data.title}
+                publishDate={article.data.publishDate}
+                slug={article.slug}
+                description={article.data.description}
+              />
+            </li>
+          );
+        })}
+    </ul>
+  );
 }

@@ -11,12 +11,12 @@
     "deploy": "firebase deploy"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
+    "@astrojs/check": "0.9.3",
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.0",
-    "@types/react": "^18.3.4",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.11.3",
+    "astro": "4.15.4",
     "firebase": "^10.12.5",
     "firebase-tools": "^13.15.1",
     "react": "^18.3.1",
