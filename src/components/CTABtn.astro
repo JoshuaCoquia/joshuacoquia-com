@@ -7,6 +7,7 @@ const bgColors = {
     primary: "bg-primary border-primary",
     secondary: "bg-secondary border-secondary",
     accent: "bg-accent border-accent",
+    'secret-red': "bg-[#901d1f] border-[#901d1f]",
 }
 
 const textColors = {
@@ -15,12 +16,13 @@ const textColors = {
     primary: "text-primary",
     secondary: "text-secondary",
     accent: "text-accent",
+    'secret-red': "text-[#901d1f]",
 }
 
-type colorOptions = "text" | "background" | "primary" | "secondary" | "accent";
+type colorOptions = "text" | "background" | "primary" | "secondary" | "accent" | "secret-red";
 ---
 <a href={href} class:list={[
-    "w-fit inline-block px-4 py-2 text-2xl lg:text-3xl rounded-2xl m-1",
+    "w-fit px-4 py-2 text-2xl lg:text-3xl rounded-2xl selection:bg-none",
     bgColors[bgcolor as colorOptions],
     textColors[textcolor as colorOptions],
     ]}><slot /></a>
