@@ -22,7 +22,7 @@ const textColors = {
 type colorOptions = "text" | "background" | "primary" | "secondary" | "accent" | "secret-red";
 ---
 <a href={href} class:list={[
-    "w-fit px-4 py-2 text-2xl lg:text-3xl rounded-2xl selection:bg-none",
+    "w-fit px-4 py-2 text-2xl lg:text-3xl rounded-2xl selection:bg-none font-montserrat",
     bgColors[bgcolor as colorOptions],
     textColors[textcolor as colorOptions],
     ]}><slot /></a>

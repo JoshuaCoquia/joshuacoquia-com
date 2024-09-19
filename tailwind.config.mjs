@@ -3,7 +3,7 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		colors: {
-			text: '#090d0f',
+			text: '#F0F3F4',
 			background: '#f7fafb',
 			transparent: 'transparent',
 			current: 'currentColor',
@@ -22,18 +22,42 @@ export default {
 				'800': '#454545',
 				'900': '#3d3d3d',
 				'950': '#191919',
-			}
+			},
+			'oceanblue': {
+				'50': '#f1fafa',
+				'100': '#dbeff2',
+				'200': '#bae0e7',
+				'300': '#8bc8d5',
+				'400': '#54a9bc',
+				'500': '#398da1',
+				'600': '#327388',
+				'700': '#2e5f70',
+				'800': '#2d505d',
+				'900': '#294350',
+				'950': '#091115',
+			},
 		},
 		extend: {
-			typography: {
+			typography: ({ theme }) => ({
 				DEFAULT: {
 					css: {
+						color: theme('colors.text'),
 						h1: {
 							fontWeight: '700',
 							fontSize: '2.5rem',
 							lineHeight: '1.5',
+							color: theme('colors.text'),
 						},
-						h2: { lineHeight: '1.5 '},
+						h2: { 
+							lineHeight: '1.5',
+							color: theme('colors.text'),
+						},
+						a: {
+							color: theme('colors.text'),
+						},
+						code: {
+							color: theme('colors.text'),
+						}
 					}
 				},
 				lg: {
@@ -46,7 +70,11 @@ export default {
 						h2: { lineHeight: '1.5' },
 					}
 				}
-			}
+			}) 
+		},
+		fontFamily: {
+			'hind': ['Hind', 'ui-sans-serif', 'system-ui'],
+			'montserrat': ['Montserrat', 'ui-sans-serif', 'system-ui'],
 		},
 		fontSize: {
 			xs: '0.75rem',

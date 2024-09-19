@@ -7,8 +7,8 @@ const columns = [
 ]
 const { bg, id, title, notprose, col, centerTitle } = Astro.props;
 ---
-<section class:list={["px-10 w-fit place-self-center", bg || 'bg-background', (!notprose ? 'max-w-prose lg:prose-lg' : 'w-full')]}} id={id}>
-    {title && <h2 class:list={["text-2xl font-bold", (centerTitle ? 'text-center' : '')]}>{title}</h2>}
+<section class:list={["px-10 w-fit place-self-center", bg || 'bg-oceanblue-950', (!notprose ? 'max-w-prose lg:prose-lg' : 'w-full')]}} id={id}>
+    {title && <h2 class:list={["text-2xl font-bold font-montserrat", (centerTitle ? 'text-center' : '')]}>{title}</h2>}
     {col ? <div class:list={["grid xl:gap-10", columns[col]]}>
         <slot />
     </div> : <slot />}

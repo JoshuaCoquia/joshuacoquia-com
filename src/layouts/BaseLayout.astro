@@ -13,6 +13,7 @@ const { hidden, pageDescription, pageTitle } = Astro.props;
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/src/styles/styles.css">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={pageDescription || "Lifelong Learner—Recording the journey."} />
@@ -20,7 +21,7 @@ const { hidden, pageDescription, pageTitle } = Astro.props;
 		<script src="../components/firebase"></script>
 		<title>{pageTitle ? pageTitle : "Joshua Coquia"}</title>
 	</head>
-	<body class="bg-background text-text w-full min-h-screen flex flex-col justify-between">
+	<body class="bg-oceanblue-950 text-text w-full min-h-screen flex flex-col justify-between">
 		<Header />
 		<main class="grid w-full gap-10 lg:gap-20 pb-10 lg:pb-20">
 			<slot />
