@@ -1,5 +1,5 @@
 ---
-const { href, bgcolor, textcolor } = Astro.props;
+const { href, bgcolor, textcolor, bold, classList } = Astro.props;
 
 const bgColors = {
     text: "bg-text border-text",
@@ -22,7 +22,7 @@ const textColors = {
 type colorOptions = "text" | "background" | "primary" | "secondary" | "accent" | "secret-red";
 ---
 <a href={href} class:list={[
-    "w-fit px-4 py-2 text-2xl lg:text-3xl rounded-2xl selection:bg-none font-montserrat",
-    bgColors[bgcolor as colorOptions],
-    textColors[textcolor as colorOptions],
+    "w-fit px-5 py-2.5 text-2xl lg:text-3xl rounded-3xl selection:bg-none font-montserrat",
+    classList,
+    (bold ? 'font-bold' : ''),
     ]}><slot /></a>

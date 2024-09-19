@@ -9,7 +9,8 @@ export default {
 			current: 'currentColor',
 			primary: '#8cbfd9',
 			secondary: '#193b4d',
-			accent: '#702424',
+			accent: '#1FC3FF',
+			cta: '#11BB96',
 			black: {
 				'50': '#f7fafb',
 				'100': '#e7e7e7',
@@ -45,11 +46,9 @@ export default {
 						h1: {
 							fontWeight: '700',
 							fontSize: '2.5rem',
-							lineHeight: '1.5',
 							color: theme('colors.text'),
 						},
 						h2: { 
-							lineHeight: '1.5',
 							color: theme('colors.text'),
 						},
 						a: {
@@ -65,9 +64,7 @@ export default {
 						h1: {
 							fontWeight: '700',
 							fontSize: '2.5rem',
-							lineHeight: '1.5',
 						},
-						h2: { lineHeight: '1.5' },
 					}
 				}
 			}) 
@@ -80,10 +77,12 @@ export default {
 			xs: '0.75rem',
 			sm: '0.875rem',
 			base: '1rem',
+			lg: '1.25rem',
 			xl: '1.5rem',
 			'2xl': '2rem',
-			'3xl': '2.5rem',
-			'4xl': '4.5rem',
+			'2.5xl': '2.5rem',
+			'3xl': '3rem',
+			'4xl': '4rem',
 		}
 	},
 	plugins: [
