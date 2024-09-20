@@ -1,5 +1,5 @@
 ---
-
+import CTABtn from "./CTABtn.astro";
 ---
 <header class="grid lg:grid-cols-2 items-center bg-oceanblue-950 px-5 lg:px-10 py-2.5 border-text border-b-2 font-montserrat w-full">
     <div class="grid max-lg:grid-cols-2 max-lg:justify-center">
@@ -15,9 +15,9 @@
         </ul>
     </nav>
     <nav id="mobileNav" class="hidden lg:!hidden mt-5">
-        <ul class="grid w-fit mx-auto gap-y-6 justify-center text-center my-6">
-            <li><a class="text-xl underline" href="/about">About</a></li>
-            <li><a class="text-xl underline" href="/articles">Articles</a></li>
+        <ul class="grid w-fit mx-auto gap-y-10 justify-center text-center my-6">
+            <li><CTABtn classList="bg-accent text-oceanblue-950" href="/about" bold>About</CTABtn></li>
+            <li><CTABtn classList="bg-accent text-oceanblue-950" href="/about" bold>Articles</CTABtn></li>
         </ul>
     </nav>
     <script>
