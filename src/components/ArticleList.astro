@@ -6,14 +6,16 @@ interface Props {
     prose?: boolean;
     title?: string;
     columns?: 1 | 2 | 3 | "1" | "2" | "3" | undefined;
+    firstResults?: string;
 }
-const { title, featuredOnly, columns, prose } = Astro.props;
+const { title, featuredOnly, columns, prose, firstResults } = Astro.props;
 const articleData = await getCollection('article', (article => {
     return (featuredOnly ? article.data.featured : true) && // If (featuredOnly = true) only include featured articles.
     article.data.hidden != true && 
     article.data.draft != true; 
 }));
 let articleCollection = articleData.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+(firstResults ? articleCollection = articleCollection.slice(0, parseInt(firstResults)) : '');
 import Articles from "./Articles.tsx";
 ---
 

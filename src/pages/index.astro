@@ -6,15 +6,15 @@ import Section from "../components/Section.astro";
 const pageTitle = "Joshua Coquia";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<section class="bg-gradient-to-r from-oceanblue-900 to-oceanblue-700 px-10 lg:px-20 py-5 lg:py-10 w-auto grid lg:grid-cols-2" id="hero">
-		<div>
+	<section class="bg-gradient-to-r from-oceanblue-900 to-oceanblue-700 px-5 lg:px-20 py-5 lg:py-10 w-auto grid xl:grid-cols-2" id="hero">
+		<div class="lg:w-min">
 			<p class="text-xl lg:text-2xl font-montserrat">Recording the journey.</p>
 			<div class="w-fit mb-20">
-				<h2 class="text-3xl xl:text-4xl font-bold font-montserrat">Joshua Coquia</h2>
+				<h2 class="text-2.5xl xl:text-4xl font-bold font-montserrat lg:w-max">Joshua Coquia</h2>
 				<hr class="hidden lg:block text-oceanblue-400 h-px border-2 w-full">
 			</div>
-			<p class="text-xl lg:text-2xl font-montserrat mt-5">Sharing life lessons, creating projects, mastering skills to empower people.</p>
-			<div class="grid md:grid-cols-[repeat(2,max-content)] gap-3 w-fit mt-5">
+			<p class="text-xl lg:text-2xl font-montserrat mt-5 w-full">Sharing life lessons, creating projects, mastering skills to empower people.</p>
+			<div class="grid grid-cols-[repeat(2,max-content)] lg:gap-3 w-fit mt-5">
 					<CTABtn classList="bg-cta text-oceanblue-950" href="/about" bold>My Story</CTABtn><CTABtn textcolor="background" href="mailto:joshua.coquia@hotmail.com">Contact Me➝</CTABtn>
 			</div>
 		</div>
@@ -26,5 +26,5 @@ const pageTitle = "Joshua Coquia";
 		<p>I’m a lifelong learner, and I use this website to document my journey in mastering skills. I record the lessons I’ve learned through my articles. These lessons will help you avoid the mistakes I’ve made and enable you to steal the strategies that work for me.</p>
 	</Section>
 	<ArticleList title="Featured Articles" featuredOnly columns="1" prose />
-	<ArticleList title="Recent Articles" columns="1" prose />
+	<ArticleList title="Recent Articles" columns="1" prose firstResults="3"/>
 </BaseLayout>
