@@ -3,15 +3,14 @@ import ArticleList from "../components/ArticleList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTABtn from "../components/CTABtn.astro";
 import Section from "../components/Section.astro";
-import Link from "../components/link.astro";
 const pageTitle = "Joshua Coquia";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<section class="bg-gradient-to-r from-oceanblue-900 to-oceanblue-700 px-10 lg:px-20 py-5 lg:py-10 w-auto grid lg:grid-cols-2" id="hero">
 		<div>
 			<p class="text-xl lg:text-2xl font-montserrat">Recording the journey.</p>
-			<div class="w-fit">
-				<h2 class="text-3xl lg:text-4xl font-bold font-montserrat">Joshua Coquia</h2>
+			<div class="w-fit mb-20">
+				<h2 class="text-3xl xl:text-4xl font-bold font-montserrat">Joshua Coquia</h2>
 				<hr class="hidden lg:block text-oceanblue-400 h-px border-2 w-full">
 			</div>
 			<p class="text-xl lg:text-2xl font-montserrat mt-5">Sharing life lessons, creating projects, mastering skills to empower people.</p>
@@ -24,7 +23,8 @@ const pageTitle = "Joshua Coquia";
 		</div>
 	</section>
 	<Section centerTitle title="Hi, I'm Joshua Coquia.">
-		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <Link href="/about">my journey</Link> inspires you to improve your own life.</p>
+		<p>I’m a lifelong learner, and I use this website to document my journey in mastering skills. I record the lessons I’ve learned through my articles. These lessons will help you avoid the mistakes I’ve made and enable you to steal the strategies that work for me.</p>
 	</Section>
-	<ArticleList title="Featured Articles" featuredOnly columns={1} prose/>
+	<ArticleList title="Featured Articles" featuredOnly columns="1" prose />
+	<ArticleList title="Recent Articles" columns="1" prose />
 </BaseLayout>

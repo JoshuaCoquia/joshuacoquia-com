@@ -2,7 +2,7 @@ import ArticlePreview from "./ArticlePreview";
 
 interface Props {
   articles: any[];
-  columns?: 1 | 2 | 3 | 4 | 5 | undefined;
+  columns?: 1 | 2 | 3 | "1" | "2" | "3" | undefined;
 }
 
 const gridCols = [
@@ -10,8 +10,6 @@ const gridCols = [
   "lg:grid-cols-1",
   "lg:grid-cols-2",
   "lg:grid-cols-3",
-  "lg:grid-cols-4",
-  "lg:grid-cols-5",
 ];
 
 export default function Articles(props: Props) {

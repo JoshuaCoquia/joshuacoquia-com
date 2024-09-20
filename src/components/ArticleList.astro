@@ -5,7 +5,7 @@ interface Props {
     featuredOnly?: boolean;
     prose?: boolean;
     title?: string;
-    columns?: 1 | 2 | 3 | 4 | 5;
+    columns?: 1 | 2 | 3 | "1" | "2" | "3" | undefined;
 }
 const { title, featuredOnly, columns, prose } = Astro.props;
 const articleData = await getCollection('article', (article => {
