@@ -2,7 +2,7 @@
 const { href, bold, classList } = Astro.props;
 ---
 <a href={href} class:list={[
-    "w-fit px-5 py-2.5 text-xl lg:text-3xl rounded-2xl selection:bg-none font-montserrat",
+    "w-fit px-5 py-2.5 text-xl lg:text-2xl rounded-2xl selection:bg-none font-montserrat",
     classList,
     (bold ? 'font-bold' : ''),
     ]}><slot /></a>

@@ -9,8 +9,8 @@ export default {
 			current: 'currentColor',
 			primary: '#8cbfd9',
 			secondary: '#193b4d',
-			accent: '#1FC3FF',
-			cta: '#11BB96',
+			accent: '#11BB96',
+			cta: '#1FC3FF',
 			black: {
 				'50': '#f7fafb',
 				'100': '#e7e7e7',
