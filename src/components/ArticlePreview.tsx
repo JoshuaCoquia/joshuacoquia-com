@@ -10,7 +10,7 @@ export default function ArticlePreview(props: Props) {
   return (
     <article>
       <a href={"/articles/" + slug}>
-        <div className="border-2 p-4 rounded-2xl border-oceanblue-950 bg-oceanblue-950">
+        <div className="rounded-2xl border-oceanblue-950 bg-oceanblue-950">
           <time
             className="text-xs lg:text-sm"
             dateTime={publishDate.toISOString()}
@@ -21,7 +21,7 @@ export default function ArticlePreview(props: Props) {
               day: "numeric",
             })}
           </time>
-          <h3 className="text-xl lg:my-0 leading-snug font-bold font-montserrat">{title}</h3>
+          <h3 className="text-xl lg:my-0 font-bold font-montserrat">{title}</h3>
           {description && <p>{description}</p>}
         </div>
       </a>

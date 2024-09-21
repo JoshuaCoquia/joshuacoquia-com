@@ -16,7 +16,7 @@ export default function Articles(props: Props) {
   const { columns } = props;
   return (
     <ul
-      className={`lg:ps-0 grid auto-rows-min gap-8 mt-3 ${gridCols[columns!]}`}
+      className={`lg:ps-0 grid auto-rows-min ${gridCols[columns!]}`}
     >
       {props.articles
         .filter((article) => article.data.publishDate.getTime() < Date.now())
