@@ -19,7 +19,7 @@ let articleCollection = articleData.sort((a, b) => b.data.publishDate.getTime() 
 import Articles from "./Articles.tsx";
 ---
 
-<Section title={title} notprose={!prose}>
+<Section title={title} notprose={!prose} centerTitle>
     <!--TODO: Fix Layout Shift -->
         <Articles client:only="react" articles={articleCollection} columns={columns} />
     </ul>

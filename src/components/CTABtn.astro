@@ -1,8 +1,9 @@
 ---
-const { href, bold, classList } = Astro.props;
+const { href, bold, classList, hoverUnderline } = Astro.props;
 ---
 <a href={href} class:list={[
     "w-fit px-5 py-2.5 text-xl lg:text-2xl rounded-2xl selection:bg-none font-montserrat",
     classList,
     (bold ? 'font-bold' : ''),
+    (hoverUnderline ? 'hover:underline' : ''),
     ]}><slot /></a>
