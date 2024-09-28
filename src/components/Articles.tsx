@@ -2,7 +2,7 @@ import ArticlePreview from "./ArticlePreview";
 
 interface Props {
   articles: any[];
-  columns?: 1 | 2 | 3 | 4 | 5 | undefined;
+  columns?: 1 | 2 | 3 | "1" | "2" | "3" | undefined;
 }
 
 const gridCols = [
@@ -10,15 +10,13 @@ const gridCols = [
   "lg:grid-cols-1",
   "lg:grid-cols-2",
   "lg:grid-cols-3",
-  "lg:grid-cols-4",
-  "lg:grid-cols-5",
 ];
 
 export default function Articles(props: Props) {
   const { columns } = props;
   return (
     <ul
-      className={`lg:ps-0 grid auto-rows-min gap-8 mt-3 ${gridCols[columns!]}`}
+      className={`lg:ps-0 grid auto-rows-min ${gridCols[columns!]} max-lg:gap-12 max-lg:py-12`}
     >
       {props.articles
         .filter((article) => article.data.publishDate.getTime() < Date.now())
