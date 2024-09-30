@@ -12,13 +12,29 @@ const { hidden, pageDescription, pageTitle } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={pageDescription || "Lifelong Learner—Recording the journey."} />
 		{hidden && <meta name="robots" content="noindex">}
 		<script src="../components/firebase"></script>
 		<title>{pageTitle ? pageTitle : "Joshua Coquia"}</title>
+		<!-- Social Media Magic -->
+		<meta property="og:title" content={pageTitle ? pageTitle : "Joshua Coquia"}>
+		<meta property="og:description" content={pageDescription || "Lifelong Learner—Recording the journey."}>
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://joshuacoquia.com/images/joshuacoquia-com-og-image.png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta name="twitter:card" content="summary_large_image">
+		<!-- Favicon Magic -->
+		<meta property="og:title" content={pageTitle ? pageTitle : "Joshua Coquia"}>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="theme-color" content="#091115">
 	</head>
 	<body class="bg-background text-text w-full min-h-screen flex flex-col justify-between">
 		<Header />
@@ -29,3 +45,4 @@ const { hidden, pageDescription, pageTitle } = Astro.props;
 		<Footer />
 	</body>
 </html>
+	

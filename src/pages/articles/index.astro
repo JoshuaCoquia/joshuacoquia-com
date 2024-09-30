@@ -2,10 +2,10 @@
 import ArticleList from "../../components/ArticleList.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Title from "../../components/Title.astro";
-const pageTitle = "Articles";
+const pageTitle = "Articles | Joshua Coquia";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<Title pageTitle={pageTitle} />
+	<Title pageTitle={"Articles"} />
 	<ArticleList prose title="Featured Articles" featuredOnly columns={1} />
 	<ArticleList title="All Articles" columns={3}/>
 </BaseLayout>
