@@ -3,19 +3,28 @@ import ArticleList from "../components/ArticleList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTABtn from "../components/CTABtn.astro";
 import Section from "../components/Section.astro";
-import Link from "../components/link.astro";
 const pageTitle = "Joshua Coquia's Website";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<section class="bg-primary px-12 lg:px-20 py-6 w-auto" id="hero">
-		<h2 class="text-3xl lg:text-4xl font-bold">Joshua Coquia</h2>
-		<p class="text-xl lg:text-2xl mb-8">Lifelong Learner—Recording the journey.</p>
-		<div class="grid md:grid-cols-[repeat(2,max-content)] gap-3 w-fit">
-			<CTABtn bgcolor="accent" textcolor="background" href="/about">About Me</CTABtn><CTABtn bgcolor="secondary" textcolor="background" href="mailto:joshua.coquia@hotmail.com">Contact Me</CTABtn>
+	<section class="bg-gradient-to-r from-oceanblue-900 to-oceanblue-700 px-10 lg:px-20 py-5 lg:py-10 w-auto grid xl:grid-cols-2" id="hero">
+		<div class="lg:w-min">
+			<p class="text-xl lg:text-2xl font-montserrat mb-0">Recording the journey.</p>
+			<div class="w-fit mb-10">
+				<h2 class="text-2.5xl xl:text-4xl font-bold font-montserrat lg:w-max">Joshua Coquia</h2>
+				<hr class="hidden lg:block text-oceanblue-400 h-px border-2 w-full">
+			</div>
+			<p class="text-xl lg:text-2xl font-montserrat w-full">Sharing life lessons, creating projects, mastering skills to empower people.</p>
+			<div class="grid grid-cols-[repeat(2,max-content)] lg:gap-3 w-fit mt-5">
+					<CTABtn classList="bg-cta text-oceanblue-950" href="/about" bold hoverUnderline>My Story</CTABtn><CTABtn textcolor="background" href="mailto:joshua.coquia@hotmail.com" hoverUnderline>Contact Me➝</CTABtn>
+			</div>
+		</div>
+		<div class="grid justify-center lg:justify-end">
+			<img src="/images/main-hero-image.svg" class="h-auto w-[350px] my-auto" alt="Icons of a pencil and a map.">
 		</div>
 	</section>
-	<Section title="Hi, I'm Joshua Coquia.">
-		<p>I am a lifelong learner, and I focus on learning skills. I use this website to document my journey in mastering these skills. I hope <Link href="/about">my journey</Link> inspires you to improve your own life.</p>
+	<Section centerTitle title="Hi, I'm Joshua Coquia.">
+		<p>I’m a lifelong learner, and I use this website to document my journey in mastering skills. I record the lessons I’ve learned through my articles. These lessons will help you avoid the mistakes I’ve made and enable you to steal the strategies that work for me.</p>
 	</Section>
-	<ArticleList title="Featured Articles" featuredOnly columns={1} prose/>
+	<ArticleList title="Featured Articles" featuredOnly columns="1" prose />
+	<ArticleList title="Recent Articles" columns="1" prose firstResults="3"/>
 </BaseLayout>

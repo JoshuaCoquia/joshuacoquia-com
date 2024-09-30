@@ -1,12 +1,30 @@
 ---
-
+import CTABtn from "./CTABtn.astro";
 ---
-<header class="grid grid-cols-2 items-center bg-primary px-10 py-2 lg:h-16">
-    <a class="w-fit text-xl lg:text-2xl font-bold" href="/"><h1>Joshua Coquia</h1></a>
-    <nav class="w-fit justify-self-end">
+<header class="grid lg:grid-cols-2 items-center bg-oceanblue-950 px-5 lg:px-10 py-2.5 border-text border-b-2 font-montserrat w-full">
+    <div class="grid max-lg:grid-cols-2 max-lg:justify-center">
+        <a class="w-max text-xl lg:text-3xl font-bold font-sans my-auto" href="/"><h1>Joshua Coquia</h1></a>
+        <button id="mobileNavBtn" class="block lg:hidden w-min ml-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+    </div>
+    <nav class="hidden lg:block w-fit justify-self-end">
         <ul class="grid max-md:grid-rows-2 md:grid-cols-2 gap-x-12 w-fit">
-            <li class="w-min"><a class="text-xl" href="/about">About</a></li>
-            <li class="w-min"><a class="text-xl" href="/articles">Articles</a></li>
+            <li><CTABtn classList="text-text" href="/about">About</CTABtn></li>
+            <li><CTABtn classList="text-text" href="/articles">Articles</CTABtn></li>
         </ul>
     </nav>
+    <nav id="mobileNav" class="hidden lg:!hidden mt-5">
+        <ul class="grid w-fit mx-auto gap-y-10 justify-center text-center my-6">
+            <li><CTABtn classList="bg-accent text-oceanblue-950" href="/about" bold>About</CTABtn></li>
+            <li><CTABtn classList="bg-accent text-oceanblue-950" href="/articles" bold>Articles</CTABtn></li>
+        </ul>
+    </nav>
+    <script>
+        const mobileNav = document.getElementById('mobileNav')!;
+        const mobileNavBtn = document.getElementById('mobileNavBtn')!;
+        mobileNavBtn.onclick = () => {
+            mobileNav?.classList.toggle('hidden');
+        }
+    </script>
 </header>

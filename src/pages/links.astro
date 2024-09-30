@@ -16,7 +16,7 @@ const links = await getCollection('link', (link => {
             <ul class="lg:ps-0 text-center">
                 {
                     links.map(link => (
-                        <li><CTABtn bgcolor="secondary" textcolor="background" href={link.data.url}>{link.data.title}</CTABtn></li>
+                        <li><CTABtn bgcolor="secondary" textcolor="background" href={link.data.url} hoverUnderline>{link.data.title}</CTABtn></li>
                     ))}
             </ul>
         </nav>
